@@ -1,28 +1,17 @@
-.App {
-  text-align: center;
-}
+/* color scheme for weather
+yellow for the sun  #FEC90D  
+off black for fonts  #263F52 
+red for hot days  #EC0A58
+blue for cold days  #1779EC
+light gray for lighter text  #8697a8 */
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
+/* go nimbly's color scheme
+darker green  #84bd5e
+lighter green  #B7D383
+dark blue-ish green  #6c9476
+dark gray  #404547
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+lighter navy  #546287
+darker navy  #343e55
+pink  #f77590
+bone  #FEFAEF */
