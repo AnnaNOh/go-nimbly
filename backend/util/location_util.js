@@ -1,8 +1,17 @@
-export const getCities = async input => {
+const fetch = require('node-fetch');
+
+const getCities = async input => {
   let results = [];
   const citiesArray = await fetchCities(input);
+  console.log(citiesArray);
   return citiesArray;
 };
+
+// const getCities = async input => {
+//   let results = [];
+//   const citiesArray = await fetchCities(input);
+//   return citiesArray;
+// };
 
 // fetches cities from API
 const fetchCities = async input => {
@@ -25,3 +34,5 @@ const fetchCities = async input => {
 // latt_long: "37.777119, -122.41964"
 // }
 // ]
+
+getCities('London');
