@@ -1,0 +1,12 @@
+section {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background: none;
+  width: 100%;
+  height: 100vh;
+}
+
+.cls-1 {
+  fill: #84bd5e;
+}

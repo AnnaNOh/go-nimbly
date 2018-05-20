@@ -76,6 +76,7 @@ class App extends Component {
     console.log('props ', this.props);
     return (
       <div className="App">
+        <Background />
         <Header />
         <input
           type="text"
