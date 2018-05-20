@@ -7,3 +7,11 @@ export const getCities = userInput => {
     }
   });
 };
+
+export const getWeather = woeId => {
+  return axios.get('/weather', {
+    params: {
+      input: woeId
+    }
+  });
+};
