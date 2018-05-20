@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import '../assets/stylesheets/App.css';
 
-class Header extends Component {
+class WeatherToday extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -12,11 +12,10 @@ class Header extends Component {
     // console.log(this.props);
     return (
       <div className="">
-        <h1>AO</h1>
-        <h1>ANNA OH</h1>
+        <h1>hi</h1>
       </div>
     );
   }
 }
 
-export default Header;
+export default WeatherToday;

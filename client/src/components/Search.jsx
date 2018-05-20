@@ -1,15 +1,8 @@
 import React, { Component } from 'react';
-import './assets/stylesheets/App.css';
-
+// import '../assets/stylesheets/App.css';
 import { getCities, getWeather } from './util/weather_api';
 
-import Background from './components/Background';
-import Header from './components/Header';
-import Loading from './components/Loading';
-import WeatherToday from './components/WeatherToday';
-import WeatherFuture from './components/WeatherFuture';
-
-class App extends Component {
+class Background extends Component {
   constructor(props) {
     super(props);
     this.update = this.update.bind(this);
@@ -72,11 +65,10 @@ class App extends Component {
   render() {
     // console.log('get cities ', getCities('san'));
     // console.log('weather test of san fran ', getWeather('2487956'));
-    console.log('state ', this.state);
-    console.log('props ', this.props);
+    // console.log(this.state);
+    // console.log(this.props);
     return (
-      <div className="App">
-        <Header />
+      <div className="">
         <input
           type="text"
           placeholder="Search"
@@ -89,4 +81,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Background;
