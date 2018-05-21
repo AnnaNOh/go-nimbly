@@ -6,11 +6,16 @@
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
+    "bootstrap": "^3.3.7",
     "express": "^4.16.3",
+    "grunt-cli": "^1.2.0",
     "nodemon": "^1.17.4",
+    "pure-react-carousel": "^1.12.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "react-scripts": "^1.1.4"
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "^1.1.4",
+    "slick-carousel": "^1.8.1"
   },
   "scripts": {
     "start": "react-scripts start",

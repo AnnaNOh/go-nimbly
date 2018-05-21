@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { HashRouter, Route, Switch, Link, withRouter } from 'react-router-dom';
+
 import './assets/stylesheets/reset.css';
 import './assets/stylesheets/App.css';
 
@@ -77,14 +79,12 @@ class App extends Component {
     console.log('props ', this.props);
     return (
       <div className="App">
-        <Background />
-        <input
-          type="text"
-          placeholder="Search"
-          value={this.state.input}
-          onChange={this.update('input')}
-        />
-        <input type="submit" onClick={this.handleSubmit} />
+        <HashRouter>
+          <Switch>
+            <Route exact path="/" component={Background} />
+            <Route exact path="/weather/:woeId" component={WeatherToday} />
+          </Switch>
+        </HashRouter>
       </div>
     );
   }

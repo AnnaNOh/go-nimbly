@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import '../assets/stylesheets/App.css';
+import '../assets/stylesheets/header.css';
 
 class Header extends Component {
   constructor(props) {
@@ -11,9 +11,9 @@ class Header extends Component {
     // console.log(this.state);
     // console.log(this.props);
     return (
-      <div className="">
-        <h1>AO</h1>
-        <h1>ANNA OH</h1>
+      <div className="header">
+        <div className="header-name">anna oh</div>
+        <div className="header-logo">ao</div>
       </div>
     );
   }
