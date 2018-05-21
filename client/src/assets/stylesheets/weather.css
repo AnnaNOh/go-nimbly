@@ -1,6 +1,12 @@
-.slider {
-  width: 100%;
-  height: 100vh;
+.carousel-holder {
+  background: yellow;
+  position: relative;
+  top: 80px;
+}
+
+.slider-item {
+  height: calc(100vh - 80px);
+  background: green;
 }
 
 .carousel-nav {
@@ -11,6 +17,7 @@
   padding: none;
   margin: 0 10px;
   font-size: 6em;
+  background: pink;
 }
 .left {
   left: 0;

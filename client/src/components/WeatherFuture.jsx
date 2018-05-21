@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import '../assets/stylesheets/App.css';
+import '../assets/stylesheets/weatherFuture.css';
 
 class WeatherFuture extends Component {
   constructor(props) {
@@ -12,7 +12,7 @@ class WeatherFuture extends Component {
     // console.log(this.props);
     return (
       <div className="">
-        <h1>hi</h1>
+        <h1>hi, I'm weather future</h1>
       </div>
     );
   }

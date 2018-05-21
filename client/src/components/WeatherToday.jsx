@@ -9,10 +9,11 @@ class WeatherToday extends Component {
 
   render() {
     // console.log(this.state);
-    // console.log(this.props);
+    console.log(this.props);
+
     return (
       <div className="">
-        <h1>hi</h1>
+        <h1>hi I'm weather today</h1>
       </div>
     );
   }

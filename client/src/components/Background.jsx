@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../assets/stylesheets/background.css';
 
-import { getCities, getWeather } from '../util/weather_api';
+import { getCities } from '../util/weather_api';
 
 import Header from './Header';
 
@@ -77,8 +77,8 @@ class Background extends Component {
 
     return (
       <div className="">
+        <Header />
         <div className="background">
-          <Header />
           <div className="sky" />
           <div className="sun-cover">
             <div className="sun-movement sun-color " />

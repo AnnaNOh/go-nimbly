@@ -7,10 +7,11 @@ import {
   ButtonNext
 } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
-import { getCities, getWeather } from '../util/weather_api';
+import { getWeather } from '../util/weather_api';
 
+import Header from './Header';
 import WeatherToday from './WeatherToday';
-// import WeatherFuture from './components/WeatherFuture';
+import WeatherFuture from './WeatherFuture';
 
 import '../assets/stylesheets/weather.css';
 
@@ -25,7 +26,6 @@ class WeatherCarousel extends Component {
 
   componentDidMount() {
     let woeId = Number(this.props.location.pathname.slice(9));
-    console.log('woeId ', woeId);
     getWeather(woeId).then(res => {
       this.setState({
         city: res.data.title,
@@ -35,19 +35,25 @@ class WeatherCarousel extends Component {
   }
 
   render() {
-    console.log(this.state);
+    // console.log(this.state);
     // console.log('props ', this.props);
+    let state = this.state;
     return (
       <div className="">
-        <div>
+        <Header />
+        <div className="carousel-holder">
           <CarouselProvider
             naturalSlideWidth={100}
             naturalSlideHeight={100}
             totalSlides={2}
           >
             <Slider className="slider">
-              <Slide index={0}>I am the first Slide.</Slide>
-              <Slide index={1}>I am the second Slide.</Slide>
+              <Slide className="slider-item" index={0}>
+                <WeatherToday weather={state.weather} city={state.city} />
+              </Slide>
+              <Slide index={1}>
+                <WeatherFuture weather={state.weather} city={state.city} />
+              </Slide>
             </Slider>
             <ButtonBack className="carousel-nav left">
               <i className="fas fa-caret-left" />
