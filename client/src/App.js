@@ -9,8 +9,7 @@ import { getCities, getWeather } from './util/weather_api';
 import Background from './components/Background';
 import Header from './components/Header';
 import Loading from './components/Loading';
-import WeatherToday from './components/WeatherToday';
-import WeatherFuture from './components/WeatherFuture';
+import WeatherCarousel from './components/WeatherCarousel';
 
 class App extends Component {
   constructor(props) {
@@ -82,7 +81,7 @@ class App extends Component {
         <HashRouter>
           <Switch>
             <Route exact path="/" component={Background} />
-            <Route exact path="/weather/:woeId" component={WeatherToday} />
+            <Route exact path="/weather/:woeId" component={WeatherCarousel} />
           </Switch>
         </HashRouter>
       </div>
