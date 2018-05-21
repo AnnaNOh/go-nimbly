@@ -5,10 +5,6 @@ import { getCities, getWeather } from '../util/weather_api';
 
 import Header from './Header';
 
-// getWeather(this.state.currentWoeId).then(res => {
-//   console.log(res);
-// });
-
 class Background extends Component {
   constructor(props) {
     super(props);
