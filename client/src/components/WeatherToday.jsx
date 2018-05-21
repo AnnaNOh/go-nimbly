@@ -22,7 +22,7 @@ class WeatherToday extends Component {
     } else {
       let weather = this.props.weather[0];
       return (
-        <div className="weather-today">
+        <div className="weather-card today">
           <h2 className="weather-city">{this.props.city}</h2>
           <WeatherGif weather={weather.weather_state_abbr} />
           <div className="weather-report">

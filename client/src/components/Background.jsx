@@ -1,79 +1,18 @@
 import React, { Component } from 'react';
 import '../assets/stylesheets/background.css';
 
-import { getCities } from '../util/weather_api';
-
 import Header from './Header';
+import Search from './Search';
 
 class Background extends Component {
   constructor(props) {
     super(props);
-    this.update = this.update.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.state = {
-      input: '',
-      currentWoeId: 0,
-      cities: [],
-      queryIsActive: false
-    };
-  }
-
-  handleSubmit() {
-    if (this.state.input === '') return null;
-    console.log('input ', this.state.input);
-
-    if (this.state.currentWoeId > 0) {
-      this.props.history.push(`/weather/${String(this.state.currentWoeId)}`);
-    } else {
-      this.setState({
-        error: 'Not an eligible city'
-      });
-    }
-  }
-
-  update(field) {
-    return e => {
-      let currentValue = e.currentTarget.value;
-      this.setState({
-        [field]: e.currentTarget.value,
-        queryIsActive: true
-      });
-
-      if (
-        currentValue.length > 3 &&
-        currentValue[currentValue.length] !== ' ' &&
-        this.state.queryIsActive
-      ) {
-        getCities(currentValue).then(res => {
-          let cities = [];
-          for (let i = 0; i < 8 && i < res.data.length; i++) {
-            cities.push(res.data[i].title);
-          }
-          this.setState({
-            cities
-          });
-
-          // only set current city if there is a match
-          if (res.data[0]) {
-            this.setState({
-              currentWoeId: res.data[0].woeid
-            });
-          }
-        });
-      } else {
-        if (this.state.currentWoeId !== 0) {
-          this.setState({
-            cities: [],
-            currentWoeId: 0
-          });
-        }
-      }
-    };
+    this.state = {};
   }
 
   render() {
-    console.log(this.state);
-    // console.log(this.props);
+    // console.log(this.state);
+    console.log(`background props `, this.props);
 
     return (
       <div className="">
@@ -100,18 +39,7 @@ class Background extends Component {
           </section>
           <div className="hill-bottom">
             <h1 className="title">go weather</h1>
-            <input
-              className="search-text"
-              type="text"
-              placeholder="See the weather in ..."
-              value={this.state.input}
-              onChange={this.update('input')}
-            />
-            <input
-              className="search-button"
-              type="submit"
-              onClick={this.handleSubmit}
-            />
+            <Search history={this.props.history} />
           </div>
         </div>
       </div>

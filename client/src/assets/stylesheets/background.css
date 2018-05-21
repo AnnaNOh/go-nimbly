@@ -200,30 +200,3 @@ bone  #FEFAEF */
   color: black;
   margin-bottom: 15px;
 }
-
-.search-text {
-  display: block;
-  box-sizing: border-box;
-  width: 250px;
-  border: none;
-  border-radius: 4px;
-  padding: 10px;
-
-  font-family: 'Open Sans', sans-serif;
-  text-align: center;
-  font-size: 16px;
-}
-.search-button {
-  margin-top: 10px;
-  display: block;
-  width: 250px;
-  border: none;
-  border-radius: 2em;
-  padding: 10px;
-
-  background: #324a44;
-  /* color: #e7e7cb; */
-  color: white;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1em;
-}

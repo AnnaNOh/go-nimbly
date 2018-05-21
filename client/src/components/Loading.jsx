@@ -10,11 +10,7 @@ class Loading extends Component {
   render() {
     // console.log(this.state);
     // console.log(this.props);
-    return (
-      <div className="">
-        <h1>hi</h1>
-      </div>
-    );
+    return <div className="">LOADING</div>;
   }
 }
 

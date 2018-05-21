@@ -1,0 +1,30 @@
+.weather-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  /* align-content: center; */
+}
+
+.weather-city {
+  text-align: center;
+}
+
+.weather-gif {
+  margin: 0 auto;
+  /* object-fit: none; */
+  object-position: center;
+  height: 400px;
+  width: 400px;
+  padding: 30px;
+}
+
+.weather-report {
+  display: flex;
+  flex-direction: row;
+}
+.weather-report-left,
+.weather-report-right {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
-// import '../assets/stylesheets/App.css';
-import { getCities, getWeather } from './util/weather_api';
+import '../assets/stylesheets/search.css';
 
-class Background extends Component {
+import { getCities } from '../util/weather_api';
+
+class Search extends Component {
   constructor(props) {
     super(props);
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.state = {
       input: '',
-      currentWoeId: '',
+      currentWoeId: 0,
       cities: [],
       queryIsActive: false
     };
@@ -17,9 +18,14 @@ class Background extends Component {
 
   handleSubmit() {
     if (this.state.input === '') return null;
-    console.log('input ', this.state.input);
 
-    // getWeather(this.state.currentWoeId).then()
+    if (this.state.currentWoeId > 0) {
+      this.props.history.push(`/weather/${String(this.state.currentWoeId)}`);
+    } else {
+      this.setState({
+        error: 'Not an eligible city'
+      });
+    }
   }
 
   update(field) {
@@ -49,15 +55,15 @@ class Background extends Component {
             this.setState({
               currentWoeId: res.data[0].woeid
             });
-          } else {
-            if (this.state.currentWoeId !== '') {
-              this.setState({
-                cities: [],
-                currentWoeId: ''
-              });
-            }
           }
         });
+      } else {
+        if (this.state.currentWoeId !== 0) {
+          this.setState({
+            cities: [],
+            currentWoeId: 0
+          });
+        }
       }
     };
   }
@@ -65,20 +71,25 @@ class Background extends Component {
   render() {
     // console.log('get cities ', getCities('san'));
     // console.log('weather test of san fran ', getWeather('2487956'));
-    // console.log(this.state);
-    // console.log(this.props);
+    console.log(this.state);
+    console.log(`props `, this.props);
     return (
       <div className="">
         <input
+          className="search-text"
           type="text"
-          placeholder="Search"
+          placeholder="See the weather in ..."
           value={this.state.input}
           onChange={this.update('input')}
         />
-        <input type="submit" onClick={this.handleSubmit} />
+        <input
+          className="search-button"
+          type="submit"
+          onClick={this.handleSubmit}
+        />
       </div>
     );
   }
 }
 
-export default Background;
+export default Search;
