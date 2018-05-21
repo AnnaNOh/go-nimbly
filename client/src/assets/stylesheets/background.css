@@ -1,12 +1,71 @@
+/* color scheme for weather
+yellow for the sun  #FEC90D
+off black for fonts  #263F52
+red for hot days  #EC0A58
+blue for cold days  #1779EC
+light gray for lighter text  #8697a8 */
+
+/* go nimbly's color scheme
+darker green  #84bd5e
+lighter green  #B7D383
+dark blue-ish green  #6c9476
+dark gray  #404547
+
+night sky:
+lighter navy  #546287
+darker navy  #343e55
+
+pink  #f77590
+bone  #FEFAEF */
+
+.background {
+  animation: 12s color-change-sky infinite alternate;
+}
+
+@keyframes color-change-sky {
+  to {
+    background: #343e55;
+  }
+  from {
+    background: #6acafa;
+  }
+}
+
 section {
   position: relative;
   margin: 0;
   padding: 0;
+  padding-top: 200px;
   background: none;
   width: 100%;
-  height: 100vh;
 }
 
-.cls-1 {
-  fill: #84bd5e;
+.hill {
+  animation: 12s color-change-hill-top infinite alternate;
+}
+
+@keyframes color-change-hill-top {
+  from {
+    fill: #b7d383;
+  }
+  to {
+    fill: #84bd5e;
+  }
+}
+
+.hill-bottom {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  top: -10px;
+  animation: 12s color-change-hill-bot infinite alternate;
+}
+
+@keyframes color-change-hill-bot {
+  from {
+    background: #b7d383;
+  }
+  to {
+    background: #84bd5e;
+  }
 }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './assets/stylesheets/reset.css';
 import './assets/stylesheets/App.css';
 
 import { getCities, getWeather } from './util/weather_api';
@@ -77,7 +78,6 @@ class App extends Component {
     return (
       <div className="App">
         <Background />
-        <Header />
         <input
           type="text"
           placeholder="Search"
