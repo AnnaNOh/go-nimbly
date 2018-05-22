@@ -20,15 +20,21 @@ input:focus {
   border: none;
   border-radius: 2em;
   padding: 10px;
-  background: #324a44;
+  background: radial-gradient(circle at 96% 50%, #577666 0%, #324a44 100%);
   color: white;
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
+  cursor: pointer;
+  transition: 0.5s;
+  /* box-shadow: 3px 5px black; */
+}
+
+.search-button-background:hover {
+  box-shadow: 0px 8px 15px 0px rgb(0, 0, 0, 0.2);
+  color: #fefaef;
 }
 
 .search-weather {
-  /* background: white; */
-  /* box-shadow: 0.5px 0.5px 0.5px 0px #ccc; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -62,6 +68,7 @@ input:focus {
   color: white;
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
+  cursor: pointer;
 }
 
 /* responsive design for search-weather */

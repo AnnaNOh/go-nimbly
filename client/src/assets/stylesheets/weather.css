@@ -9,6 +9,7 @@ h3 {
 .weather-carousel {
   height: 100%;
   width: 100%;
+  overflow: hidden;
   background: #f7f7f7;
 }
 
