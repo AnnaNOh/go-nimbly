@@ -47,7 +47,7 @@ Sleek and straightforward.
     * this minimizes the need to add media queries for every device size
 
 * Why Express?
-  * After receiving a `No "Access-Control-Allow-Origin" header"` error, I made the Express back end to circumvent the cross origin issue
+  * After receiving a `No "Access-Control-Allow-Origin" header"` error, I made the Express back end to address the cross origin issue
 
 ## React Component Hierarchy
 
