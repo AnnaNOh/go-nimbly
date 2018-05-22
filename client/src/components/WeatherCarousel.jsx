@@ -16,7 +16,9 @@ class WeatherCarousel extends Component {
       weather: []
     };
   }
-  handleCity(woeId) {
+
+  componentDidMount() {
+    let woeId = Number(this.props.location.pathname.slice(9));
     getWeather(woeId).then(res => {
       this.setState({
         city: res.data.title,
@@ -25,8 +27,7 @@ class WeatherCarousel extends Component {
     });
   }
 
-  componentDidMount() {
-    let woeId = Number(this.props.location.pathname.slice(9));
+  handleCity(woeId) {
     getWeather(woeId).then(res => {
       this.setState({
         city: res.data.title,

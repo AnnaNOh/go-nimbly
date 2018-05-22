@@ -35,7 +35,7 @@ class Splash extends Component {
             <Search
               classTag="background"
               comingFrom="background"
-              // history={this.props.history}
+              history={this.props.history}
             />
           </div>
           <div className="hill-bot" />

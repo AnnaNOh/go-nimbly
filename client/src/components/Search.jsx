@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../assets/stylesheets/search.css';
 
-import { getCities } from '../util/weather_api';
+import { getCities, getWeather } from '../util/weather_api';
 import SearchError from './SearchError';
 
 class Search extends Component {
@@ -10,12 +10,15 @@ class Search extends Component {
     this.onKeyPress = this.onKeyPress.bind(this);
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleCity = this.handleCity.bind(this);
     this.state = {
       input: '',
       currentWoeId: 0,
       cities: [],
       queryIsActive: false,
-      error: false
+      error: false,
+      weather: [],
+      city: ''
     };
   }
 
@@ -23,6 +26,15 @@ class Search extends Component {
     if (e.key === 'Enter') {
       this.handleSubmit();
     }
+  }
+
+  handleCity(woeId) {
+    getWeather(woeId).then(res => {
+      this.setState({
+        city: res.data.title,
+        weather: res.data.consolidated_weather
+      });
+    });
   }
 
   handleSubmit() {
@@ -33,9 +45,18 @@ class Search extends Component {
         error: false
       });
       if (this.props.comingFrom === 'background') {
-        this.props.history.push(`/weather/${String(this.state.currentWoeId)}`);
+        this.handleCity(this.state.currentWoeId);
+
+        setTimeout(() => {
+          this.props.history.push({
+            pathname: `/weather/${String(this.state.currentWoeId)}`,
+            state: {
+              city: this.state.city,
+              weather: this.state.weather
+            }
+          });
+        }, 1000);
       } else {
-        this.props.history.push(`/weather/${String(this.state.currentWoeId)}`);
         this.props.handleCity(this.state.currentWoeId);
       }
     } else {
