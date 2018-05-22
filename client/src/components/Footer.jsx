@@ -12,8 +12,8 @@ class Footer extends Component {
     // console.log(this.props);
     return (
       <div className="footer">
-        <div>GitHub</div>
-        <div>LinkedIn</div>
+        <a href="https://github.com/AnnaNOh">GitHub</a>
+        <a href="https://www.linkedin.com/in/annanoh/">LinkedIn</a>
       </div>
     );
   }

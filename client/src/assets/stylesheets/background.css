@@ -30,8 +30,7 @@ bone  #FEFAEF */
 }
 
 .sky {
-  width: 100%;
-  height: 20%;
+  height: 300px;
   animation: 12s color-change-sky infinite alternate;
   animation-delay: -6s;
 }
@@ -43,11 +42,6 @@ bone  #FEFAEF */
   to {
     background: #6acafa;
   }
-}
-
-.sun-cover {
-  /* position: relative; */
-  overflow-x: hidden;
 }
 
 .sun-movement {
@@ -63,93 +57,93 @@ bone  #FEFAEF */
   0% {
     background: yellow;
     left: 5%;
-    top: 500px;
+    top: 80%;
   }
   10% {
-    top: 325px;
+    top: 50%;
   }
   15% {
-    top: 220px;
+    top: 30%;
   }
   18.5% {
-    top: 180px;
+    top: 23%;
   }
   20% {
-    top: 175px;
+    top: 21%;
   }
   21.5% {
-    top: 172px;
+    top: 20%;
   }
   22.5% {
-    top: 170px;
+    top: 19.5%;
   }
   23.5% {
-    top: 172px;
+    top: 20%;
   }
   25% {
-    top: 175px;
+    top: 21%;
   }
   26.5% {
-    top: 180px;
+    top: 23%;
   }
   30% {
-    top: 220px;
+    top: 30%;
   }
   35% {
-    top: 320px;
+    top: 50%;
   }
   45% {
     background: yellow;
     left: 80%;
-    top: 500px;
+    top: 80%;
   }
   50% {
     background: #fefaef;
     left: 5%;
-    top: 500px;
+    top: 80%;
   }
   60% {
-    top: 325px;
+    top: 50%;
   }
   65% {
-    top: 220px;
+    top: 30%;
   }
   68.5% {
-    top: 180px;
+    top: 23%;
   }
   70% {
-    top: 175px;
+    top: 21%;
   }
   71.5% {
-    top: 172px;
+    top: 20%;
   }
   72.5% {
-    top: 170px;
+    top: 19.5%;
   }
   73.5% {
-    top: 172px;
+    top: 20%;
   }
   75% {
-    top: 175px;
+    top: 21%;
   }
   76.5% {
-    top: 180px;
+    top: 23%;
   }
   80% {
-    top: 220px;
+    top: 30%;
   }
   85% {
-    top: 320px;
+    top: 50%;
   }
   95% {
     background: #fefaef;
     left: 80%;
-    top: 500px;
+    top: 80%;
   }
   100% {
     background: yellow;
     left: 5%;
-    top: 500px;
+    top: 80%;
   }
 }
 
@@ -157,10 +151,7 @@ bone  #FEFAEF */
   position: relative;
   margin: 0;
   padding: 0;
-  /* padding-top: 200px; */
-  /* background: none; */
   width: 100%;
-  /* padding-bottom: 200px; */
 }
 
 .hill {
@@ -180,8 +171,6 @@ bone  #FEFAEF */
 .hill-mid {
   width: 100%;
   height: 200px;
-  /* height: 100%; */
-  /* min-height: 100%; */
   position: relative;
   top: -10px;
   animation: 12s color-change-hill-mid infinite alternate;

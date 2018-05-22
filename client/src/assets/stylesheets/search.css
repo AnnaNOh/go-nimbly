@@ -52,9 +52,10 @@ input:focus {
   padding: 10px;
   margin: 10px auto 0 auto;
   font-family: 'Open Sans', sans-serif;
-  text-align: center;
   font-size: 16px;
   background: white;
+  /* text-align: center; */
+  text-indent: 20px;
 }
 
 .search-button-weather {

@@ -8,3 +8,18 @@
   width: 100%;
   padding: 20px;
 }
+
+.footer > * {
+  font-family: 'Open Sans', sans-serif;
+  transition: 0.5s;
+  color: #263f52;
+}
+
+.footer > *:hover {
+  color: #6c9476;
+  cursor: pointer;
+}
+
+.footer > :first-child {
+  margin-right: 15px;
+}
