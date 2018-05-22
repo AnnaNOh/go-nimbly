@@ -77,8 +77,8 @@ class WeatherCarousel extends Component {
               </Slide>
             </Slider>
             <div className="dot-container">
-              <Dot className="dot" slide={0} />
-              <Dot className="dot" slide={1} />
+              <Dot className="dot" disabled="true" slide={0} />
+              <Dot className="dot" disabled="true" slide={1} />
             </div>
           </CarouselProvider>
         </div>
