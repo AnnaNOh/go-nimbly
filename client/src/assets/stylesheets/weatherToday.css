@@ -10,7 +10,6 @@
   margin: 0 auto;
 }
 
-/* image */
 .weather-gif {
   margin: 0 auto;
   height: 300px;
@@ -22,7 +21,6 @@
   flex-direction: row;
   justify-content: space-between;
   margin-top: 30px;
-  /* margin: 15px 20px 15px 20px; */
   width: 300px;
   margin: 10px auto;
 }
@@ -45,6 +43,4 @@
 }
 .min {
   color: #485677;
-}
-@media only screen and (min-width: 500px) {
 }

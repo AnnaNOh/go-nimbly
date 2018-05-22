@@ -1,19 +1,19 @@
 .footer {
+  width: 100%;
+  padding: 20px;
   position: fixed;
   left: 0;
   bottom: 0;
   background: white;
   display: flex;
   flex-direction: row;
-  width: 100%;
-  padding: 20px;
 }
 
 .footer > * {
   font-family: 'Open Sans', sans-serif;
-  transition: 0.5s;
-  color: #263f52;
   text-decoration: none;
+  color: #263f52;
+  transition: 0.5s;
 }
 
 .footer > *:hover {

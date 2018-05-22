@@ -8,23 +8,23 @@
 }
 
 .header-logo {
-  padding: 1px 10px 7px 8px;
-  font-family: 'Yellowtail', cursive;
-  font-size: 40px;
-  color: white;
-  background-color: black;
-  border-radius: 65px;
   display: inline-block;
   position: relative;
   top: -5px;
+  padding: 1px 10px 7px 8px;
+  background-color: black;
+  border-radius: 65px;
+  font-family: 'Yellowtail', cursive;
+  font-size: 40px;
+  color: white;
 }
 
 .header-name {
   display: inline-block;
-  font-family: 'Yellowtail', cursive;
-  font-size: 60px;
   margin-right: 12px;
   position: relative;
   top: 5px;
+  font-family: 'Yellowtail', cursive;
+  font-size: 60px;
   color: black;
 }

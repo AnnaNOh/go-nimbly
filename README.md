@@ -28,9 +28,9 @@ Sleek and straightforward.
 
 ## Bonus
 
-1.  Animations Galore! CSS is the best part of any project
-2.  Responsive Design
-3.  Go Nimbly inspired color scheme and design - Does it look familiar?
+1.  Animations galore! CSS is the best part of any project
+2.  Responsive design
+3.  Go Nimbly inspired color scheme and design. Does it look familiar?
 
 ## Design Decisions
 

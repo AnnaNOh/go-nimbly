@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../assets/stylesheets/weatherFuture.css';
 
 import WeatherGif from './WeatherGif';
 
