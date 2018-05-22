@@ -1,5 +1,11 @@
 # GoWeather
 
+## Overview
+
+A single-page weather application.
+You enter a city. It gives you the weather.
+Sleek and straightforward.
+
 ## Technologies
 
 * React.JS
@@ -12,45 +18,52 @@
 ## Tasks (All Completed)
 
 1.  Build a UI for web browsers that takes a user input
-2.  Make a callout to a 3-rd party API with user input
-    I chose https://www,metaweather.com/api/
-3.  Displays the data in a nice way below the user input
+2.  Make a callout to a 3rd party API with user input
+    I chose to use https://www,metaweather.com/api/
+3.  Display the data in a nice way below the user input
 4.  Deploy it to Heroku
 
-# Bonus
+## Bonus
 
-1.  Enter key and Tab-then-Space bar submit the zipcode query.
+1.  Animations Galore! - CSS is the best part of any project
+2.  Responsive Design
+3.  Go Nimbly inspired color scheme and design - Does it look familiar?
 
-# Design Decisions
+## Design Decisions
+
+* A Splash Page with Hand Rolled Animations
+
+  * A splash page was added for extra oomph
+  * Please note: the hills of the splash page are intentionally two different colors to add more depth. They're Cubism inspired.
 
 * Responsive Design
+
   * Media queries were based off of the way the content appeared on screen
     * this minimizes the need to add media queries for every device size
-* Font choice
-  * defaulted to Scandia Regular
-  * Sometimes, the design documents listed Scandia as the font but displayed Helvetica
-  * If the design documents requested Scandia-Bold but that choice didn't flow well with the overall appearance, I chose to use Scandia-Regular and add font-weight
-* Target Icon for the Hero image
-  * I left his out because I could only find an icon with a brighter red that made the contrasted too much.
-* In a production environment, all of these choices would be discussed with the designer in a collaborative fashion
 
-# Project Structure
+* Why Express?
+  * After receiving a `No "Access-Control-Allow-Origin" header"` error, I made the Express back end to circumvent the cross origin issue
 
-* src
-  * assets
-    * font
-    * images
-    * stylesheets
-  * components
-    * Footer-Header
-    * Hero
-    * Informational
-    * Navigation
-    * Results
-  * Util
-    * info_util
-    * zip_util
+## React Component Hierarchy
 
-# Contact
+* < App />
+  * < Splash />
+    * < Header />
+    * < Search />
+      * < SearchError />
+    * < Footer/>
+  * < WeatherCarousel />
+    * < Header />
+    * < Search />
+      * < SearchError/>
+    * <Loading />
+    * < Carousel />
+      * < WeatherToday />
+        * < WeatherGif/>
+      * < WeatherFuture />
+        * < WeatherGif/>
+    * < Footer/>
 
-Tmnguyen12@gmail.com
+## Contact
+
+annanoh7@gmail.com

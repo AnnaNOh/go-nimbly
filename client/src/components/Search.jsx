@@ -29,6 +29,9 @@ class Search extends Component {
     if (this.state.input === '') return null;
 
     if (this.state.currentWoeId > 0) {
+      this.setState({
+        error: false
+      });
       if (this.props.comingFrom === 'background') {
         this.props.history.push(`/weather/${String(this.state.currentWoeId)}`);
       } else {

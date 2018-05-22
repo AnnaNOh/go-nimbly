@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import '../assets/stylesheets/background.css';
+import '../assets/stylesheets/splash.css';
 
 import Header from './Header';
 import Search from './Search';
 import Footer from './Footer';
 
-class Background extends Component {
+class Splash extends Component {
   render() {
     return (
       <div className="splash">
@@ -46,4 +46,4 @@ class Background extends Component {
   }
 }
 
-export default Background;
+export default Splash;
