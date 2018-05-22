@@ -27,12 +27,20 @@ bone  #FEFAEF */
   height: 100%;
   animation: 12s color-change-sky infinite alternate;
   animation-delay: -6s;
+  display: flex;
+  flex-direction: column;
 }
 
 .sky {
-  height: 300px;
+  height: 20%;
   animation: 12s color-change-sky infinite alternate;
   animation-delay: -6s;
+}
+
+@media screen and (max-width: 600px) {
+  .sky {
+    height: 45%;
+  }
 }
 
 @keyframes color-change-sky {
