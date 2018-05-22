@@ -183,6 +183,7 @@ bone  #FEFAEF */
   top: -10px;
   animation: 12s color-change-hill-mid infinite alternate;
   animation-delay: -6s;
+  z-index: 2;
 
   display: flex;
   flex-direction: column;
