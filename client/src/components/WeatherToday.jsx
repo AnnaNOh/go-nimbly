@@ -11,7 +11,7 @@ class WeatherToday extends Component {
   }
 
   render() {
-    console.log(this.props);
+    // console.log(this.props);
 
     if (this.props.city.length <= 0) {
       return (
@@ -25,6 +25,7 @@ class WeatherToday extends Component {
         <div className="weather-card today">
           <h2 className="weather-city">{this.props.city}</h2>
           <WeatherGif weather={weather.weather_state_abbr} />
+
           <div className="weather-report">
             <div className="weather-report-left">
               <h3 className="weather-report-date">RIGHT NOW</h3>

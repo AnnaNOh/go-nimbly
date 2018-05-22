@@ -39,7 +39,7 @@ class Background extends Component {
           </section>
           <div className="hill-bottom">
             <h1 className="title">go weather</h1>
-            <Search history={this.props.history} />
+            <Search classTag="background" history={this.props.history} />
           </div>
         </div>
       </div>

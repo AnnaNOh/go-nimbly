@@ -20,7 +20,9 @@ class Search extends Component {
     if (this.state.input === '') return null;
 
     if (this.state.currentWoeId > 0) {
+      console.log('search ', this.state);
       this.props.history.push(`/weather/${String(this.state.currentWoeId)}`);
+      this.props.handleCity(this.state.currentWoeId);
     } else {
       this.setState({
         error: 'Not an eligible city'
@@ -71,19 +73,19 @@ class Search extends Component {
   render() {
     // console.log('get cities ', getCities('san'));
     // console.log('weather test of san fran ', getWeather('2487956'));
-    console.log(this.state);
-    console.log(`props `, this.props);
+    // console.log(this.state);
+    // console.log(`props `, this.props);
     return (
-      <div className="">
+      <div className={'search-' + this.props.classTag}>
         <input
-          className="search-text"
+          className={'search-text-' + this.props.classTag}
           type="text"
           placeholder="See the weather in ..."
           value={this.state.input}
           onChange={this.update('input')}
         />
         <input
-          className="search-button"
+          className={'search-button-' + this.props.classTag}
           type="submit"
           onClick={this.handleSubmit}
         />
