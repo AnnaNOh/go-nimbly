@@ -22,14 +22,13 @@ Sleek and straightforward.
 ![Search](https://media.giphy.com/media/RMy60W37wvcKYvGzLi/giphy.gif)
 
 1.  Build a UI for web browsers that takes a user input
-2.  Make a callout to a 3rd party API with user input
-    I chose to use https://www,metaweather.com/api/
+2.  Make a callout to a 3rd party API with user input. (I chose to use https://www.metaweather.com/api/)
 3.  Display the data in a nice way below the user input
 4.  Deploy it to Heroku
 
 ## Bonus
 
-1.  Animations Galore! - CSS is the best part of any project
+1.  Animations Galore! CSS is the best part of any project
 2.  Responsive Design
 3.  Go Nimbly inspired color scheme and design - Does it look familiar?
 
@@ -57,18 +56,18 @@ Sleek and straightforward.
     * < Header />
     * < Search />
       * < SearchError />
-    * < Footer/>
+    * < Footer />
   * < WeatherCarousel />
     * < Header />
     * < Search />
-      * < SearchError/>
+      * < SearchError />
     * <Loading />
     * < Carousel />
       * < WeatherToday />
-        * < WeatherGif/>
+        * < WeatherGif />
       * < WeatherFuture />
-        * < WeatherGif/>
-    * < Footer/>
+        * < WeatherGif />
+    * < Footer />
 
 ## Contact
 
