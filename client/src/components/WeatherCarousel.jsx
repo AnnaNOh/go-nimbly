@@ -63,7 +63,7 @@ class WeatherCarousel extends Component {
         <div className="carousel-holder">
           <CarouselProvider
             naturalSlideWidth={100}
-            naturalSlideHeight={100}
+            naturalSlideHeight={125}
             totalSlides={2}
           >
             <Slider className="slider">

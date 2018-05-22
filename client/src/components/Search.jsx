@@ -21,8 +21,13 @@ class Search extends Component {
 
     if (this.state.currentWoeId > 0) {
       console.log('search ', this.state);
-      this.props.history.push(`/weather/${String(this.state.currentWoeId)}`);
-      this.props.handleCity(this.state.currentWoeId);
+      console.log('search ', this.props);
+      if (this.props.comingFrom === 'background') {
+        this.props.history.push(`/weather/${String(this.state.currentWoeId)}`);
+      } else {
+        this.props.history.push(`/weather/${String(this.state.currentWoeId)}`);
+        this.props.handleCity(this.state.currentWoeId);
+      }
     } else {
       this.setState({
         error: 'Not an eligible city'

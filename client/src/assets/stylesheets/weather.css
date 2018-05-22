@@ -4,16 +4,15 @@
 
 .search-holder {
   background: #f7f7f7;
-  padding: 15px 15px 2px 15px;
+  padding: 15px 3.75vw 2px 3.75vw;
 }
 
 .carousel-holder {
+  /* background: yellow; */
 }
 
 .slider-item {
   background: #f7f7f7;
-  /* height: 70vh; */
-  /* overflow: scroll; */
 }
 
 /* navigation arrows */

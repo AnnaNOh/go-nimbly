@@ -3,6 +3,7 @@ import '../assets/stylesheets/background.css';
 
 import Header from './Header';
 import Search from './Search';
+import Footer from './Footer';
 
 class Background extends Component {
   constructor(props) {
@@ -15,7 +16,7 @@ class Background extends Component {
     console.log(`background props `, this.props);
 
     return (
-      <div className="">
+      <div className="splash">
         <Header />
         <div className="background">
           <div className="sky" />
@@ -37,11 +38,17 @@ class Background extends Component {
               />
             </svg>
           </section>
-          <div className="hill-bottom">
+          <div className="hill-mid">
             <h1 className="title">go weather</h1>
-            <Search classTag="background" history={this.props.history} />
+            <Search
+              classTag="background"
+              comingFrom="background"
+              history={this.props.history}
+            />
           </div>
+          <div className="hill-bot" />
         </div>
+        <Footer />
       </div>
     );
   }

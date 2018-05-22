@@ -67,7 +67,7 @@ input.search-text-weather::placeholder {
   font-size: 1em;
 }
 
-/* responsive design */
+/* responsive design for search-weather */
 @media only screen and (min-width: 620px) {
   .search-weather {
     flex-direction: row;
