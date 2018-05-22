@@ -1,0 +1,10 @@
+.loading {
+  font-family: 'Bree Serif', serif;
+  font-size: 1.5em;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  margin: 30px 0;
+  width: 100%;
+  text-align: center;
+  color: #26242e;
+}

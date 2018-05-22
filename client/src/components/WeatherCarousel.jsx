@@ -1,13 +1,6 @@
 import React, { Component } from 'react';
-import {
-  CarouselProvider,
-  Slider,
-  Slide,
-  Dot,
-  ButtonBack,
-  ButtonNext
-} from 'pure-react-carousel';
-import 'pure-react-carousel/dist/react-carousel.es.css';
+import Carousel from './Carousel';
+
 import { getWeather } from '../util/weather_api';
 
 import Header from './Header';
@@ -62,26 +55,8 @@ class WeatherCarousel extends Component {
             handleCity={this.handleCity}
           />
         </div>
-        <div className="carousel-holder">
-          <CarouselProvider
-            naturalSlideWidth={100}
-            naturalSlideHeight={125}
-            totalSlides={2}
-          >
-            <Slider className="slider">
-              <Slide className="slider-item" index={0}>
-                <WeatherToday weather={state.weather} city={state.city} />
-              </Slide>
-              <Slide index={1}>
-                <WeatherFuture weather={state.weather} city={state.city} />
-              </Slide>
-            </Slider>
-            <div className="dot-container">
-              <Dot className="dot" disabled="true" slide={0} />
-              <Dot className="dot" disabled="true" slide={1} />
-            </div>
-          </CarouselProvider>
-        </div>
+        <h3 className="weather-city">{this.state.city}</h3>
+        <Carousel weather={state.weather} city={state.city} />
         <Footer />
       </div>
     );

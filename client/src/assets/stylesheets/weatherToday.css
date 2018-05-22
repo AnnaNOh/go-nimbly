@@ -1,33 +1,20 @@
-h3 {
-  font-family: 'Bree Serif', serif;
-  font-size: 1.5em;
-  font-weight: 600;
-  letter-spacing: 0.6px;
-}
-
 .weather-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
   background: white;
-  margin: 3.75vw 3.75vw 1vw 3.75vw;
   border-radius: 4px;
   box-shadow: 0.5px 0.5px 0.5px 0px #ccc;
-}
-
-.weather-city {
-  margin: 10px 0px 10px 0px;
-  text-align: center;
-  font-family: 'Bree Serif', serif;
-  font-size: 2.5em;
-  color: #26242e;
+  padding: 15px 0 30px 0;
+  width: 330px;
+  margin: 0 auto;
 }
 
 /* image */
 .weather-gif {
   margin: 0 auto;
-  height: 85vw;
-  width: 85vw;
+  height: 300px;
+  width: 300px;
 }
 
 .weather-report {
@@ -35,7 +22,9 @@ h3 {
   flex-direction: row;
   justify-content: space-between;
   margin-top: 30px;
-  margin: 15px calc(3.75vw) 15px calc(3.75vw);
+  /* margin: 15px 20px 15px 20px; */
+  width: 300px;
+  margin: 10px auto;
 }
 .weather-report-left,
 .weather-report-right {
@@ -56,4 +45,6 @@ h3 {
 }
 .min {
   color: #485677;
+}
+@media only screen and (min-width: 500px) {
 }

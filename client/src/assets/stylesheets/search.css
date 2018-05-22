@@ -27,12 +27,12 @@ input:focus {
 }
 
 .search-weather {
-  background: white;
+  /* background: white; */
+  /* box-shadow: 0.5px 0.5px 0.5px 0px #ccc; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-radius: 4px;
-  box-shadow: 0.5px 0.5px 0.5px 0px #ccc;
   margin-bottom: 0px;
 }
 
@@ -40,7 +40,8 @@ input:focus {
   display: block;
   box-sizing: border-box;
   width: 80%;
-  border: 1px solid #c5c5c5;
+  /* border: 1px solid #c5c5c5; */
+  border: none;
   border-radius: 4px;
   padding: 10px;
   margin: 10px auto 0 auto;
@@ -48,10 +49,6 @@ input:focus {
   text-align: center;
   font-size: 16px;
   background: white;
-}
-
-input.search-text-weather::placeholder {
-  color: gray;
 }
 
 .search-button-weather {

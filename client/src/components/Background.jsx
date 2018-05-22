@@ -13,7 +13,7 @@ class Background extends Component {
 
   render() {
     // console.log(this.state);
-    console.log(`background props `, this.props);
+    // console.log(`background props `, this.props);
 
     return (
       <div className="splash">

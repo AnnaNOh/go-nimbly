@@ -12,21 +12,18 @@ class WeatherFuture extends Component {
     // console.log(this.state);
     // console.log(this.props);
     if (this.props.city.length <= 0) {
-      return (
-        <div>
-          <h1>Looking Outside For You</h1>
-        </div>
-      );
+      return <div />;
     } else {
-      let weather = this.props.weather[1];
+      let weather = this.props.weather;
       return (
-        <div className="weather-card future">
-          <h2 className="weather-city">{this.props.city}</h2>
+        <div className="weather-card today">
           <WeatherGif weather={weather.weather_state_abbr} />
 
           <div className="weather-report">
             <div className="weather-report-left">
-              <h3 className="weather-report-date">Tomorrow</h3>
+              <h3 className="weather-report-date">
+                {weather.applicable_date.slice(5)}
+              </h3>
               <h3 className="weather-report-status">
                 {weather.weather_state_name}
               </h3>

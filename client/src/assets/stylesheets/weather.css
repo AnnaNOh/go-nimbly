@@ -1,5 +1,14 @@
+h3 {
+  font-family: 'Bree Serif', serif;
+  font-size: 2em;
+  font-weight: 600;
+  color: #26242e;
+  letter-spacing: 0.6px;
+}
+
 .weather-carousel {
   height: 100%;
+  width: 100%;
   background: #f7f7f7;
 }
 
@@ -8,29 +17,10 @@
 }
 
 .search-holder {
-  padding: 15px 3.75vw 0px 3.75vw;
+  padding: 15px 10px 0px 10px;
 }
 
-.carousel-holder {
-}
-
-.slider-item {
-}
-
-/* navigation dots */
-.dot-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  position: relative;
-  top: -1.5vh;
-}
-.dot {
-  margin: 2px;
-  padding: 0px;
-  border: none;
-  width: 10vw;
-  height: 0.7vh;
-  background: #343e55;
-  align-items: center;
+.weather-city {
+  margin: 30px 0 10px 0;
+  text-align: center;
 }
