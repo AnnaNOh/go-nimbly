@@ -31,7 +31,7 @@ bone  #FEFAEF */
 
 .sky {
   width: 100%;
-  height: 200px;
+  height: 20%;
   animation: 12s color-change-sky infinite alternate;
   animation-delay: -6s;
 }
@@ -195,7 +195,7 @@ bone  #FEFAEF */
 
 .hill-bot {
   width: 100%;
-  height: calc(77vh - 200px - 200px);
+  height: 100%;
   animation: 12s color-change-hill-mid infinite alternate;
   animation-delay: -6s;
   position: relative;

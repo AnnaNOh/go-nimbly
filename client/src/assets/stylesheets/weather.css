@@ -1,33 +1,36 @@
+.weather-carousel {
+  height: 100%;
+  background: #f7f7f7;
+}
+
 .nav-bar-displacer {
   height: 75px;
 }
 
 .search-holder {
-  background: #f7f7f7;
-  padding: 15px 3.75vw 2px 3.75vw;
+  padding: 15px 3.75vw 0px 3.75vw;
 }
 
 .carousel-holder {
-  /* background: yellow; */
 }
 
 .slider-item {
-  background: #f7f7f7;
 }
 
-/* navigation arrows */
-.carousel-nav {
-  position: absolute;
-  top: 50%;
+/* navigation dots */
+.dot-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  top: -1.5vh;
+}
+.dot {
+  margin: 2px;
+  padding: 0px;
   border: none;
-  background: none;
-  padding: none;
-  margin: 0 10px;
-  font-size: 4em;
-}
-.left {
-  left: 0;
-}
-.right {
-  right: 0;
+  width: 10vw;
+  height: 0.7vh;
+  background: #343e55;
+  align-items: center;
 }

@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import '../assets/stylesheets/weatherToday.css';
 import WeatherGif from './WeatherGif';
 
-import lc1 from '../assets/gifs/lc-1.gif';
-
 class WeatherToday extends Component {
   constructor(props) {
     super(props);

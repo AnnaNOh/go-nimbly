@@ -3,6 +3,7 @@ import {
   CarouselProvider,
   Slider,
   Slide,
+  Dot,
   ButtonBack,
   ButtonNext
 } from 'pure-react-carousel';
@@ -13,6 +14,7 @@ import Header from './Header';
 import Search from './Search';
 import WeatherToday from './WeatherToday';
 import WeatherFuture from './WeatherFuture';
+import Footer from './Footer';
 
 import '../assets/stylesheets/weather.css';
 
@@ -74,14 +76,13 @@ class WeatherCarousel extends Component {
                 <WeatherFuture weather={state.weather} city={state.city} />
               </Slide>
             </Slider>
-            <ButtonBack className="carousel-nav left">
-              <i className="fas fa-caret-left" />
-            </ButtonBack>
-            <ButtonNext className="carousel-nav right">
-              <i className="fas fa-caret-right" />
-            </ButtonNext>
+            <div className="dot-container">
+              <Dot className="dot" slide={0} />
+              <Dot className="dot" slide={1} />
+            </div>
           </CarouselProvider>
         </div>
+        <Footer />
       </div>
     );
   }

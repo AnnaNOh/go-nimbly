@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../assets/stylesheets/weatherFuture.css';
+import WeatherGif from './WeatherGif';
 
 class WeatherFuture extends Component {
   constructor(props) {
@@ -10,11 +11,38 @@ class WeatherFuture extends Component {
   render() {
     // console.log(this.state);
     // console.log(this.props);
-    return (
-      <div className="">
-        <h1>hi, I'm weather future</h1>
-      </div>
-    );
+    if (this.props.city.length <= 0) {
+      return (
+        <div>
+          <h1>Looking Outside For You</h1>
+        </div>
+      );
+    } else {
+      let weather = this.props.weather[1];
+      return (
+        <div className="weather-card future">
+          <h2 className="weather-city">{this.props.city}</h2>
+          <WeatherGif weather={weather.weather_state_abbr} />
+
+          <div className="weather-report">
+            <div className="weather-report-left">
+              <h3 className="weather-report-date">Tomorrow</h3>
+              <h3 className="weather-report-status">
+                {weather.weather_state_name}
+              </h3>
+            </div>
+            <div className="weather-report-right">
+              <h3 className="weather-report-degree max">
+                {Math.round(weather.max_temp * 9 / 5 + 32)}&deg;F
+              </h3>
+              <h3 className="weather-report-degree min">
+                {Math.round(weather.min_temp * 9 / 5 + 32)}&deg;F
+              </h3>
+            </div>
+          </div>
+        </div>
+      );
+    }
   }
 }
 

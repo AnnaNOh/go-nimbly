@@ -10,7 +10,7 @@ h3 {
   flex-direction: column;
   justify-content: center;
   background: white;
-  margin: 3.75vw;
+  margin: 3.75vw 3.75vw 1vw 3.75vw;
   border-radius: 4px;
   box-shadow: 0.5px 0.5px 0.5px 0px #ccc;
 }
