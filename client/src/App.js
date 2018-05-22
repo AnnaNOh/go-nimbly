@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import './assets/stylesheets/reset.css';
-import './assets/stylesheets/app.css';
+import './assets/stylesheets/App.css';
 
 import Background from './components/Background';
 import WeatherCarousel from './components/WeatherCarousel';

@@ -42,6 +42,11 @@ input:focus {
   margin-bottom: 0px;
 }
 
+.search-adaptive-weather {
+  display: flex;
+  flex-direction: column;
+}
+
 .search-text-weather {
   display: block;
   box-sizing: border-box;
@@ -73,9 +78,10 @@ input:focus {
 }
 
 /* responsive design for search-weather */
-@media only screen and (min-width: 620px) {
-  .search-weather {
+@media only screen and (min-width: 600px) {
+  .search-adaptive-weather {
     flex-direction: row;
+    justify-content: center;
     padding: 0 10px;
   }
   .search-text-weather {

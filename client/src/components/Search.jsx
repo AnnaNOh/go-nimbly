@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../assets/stylesheets/search.css';
 
 import { getCities } from '../util/weather_api';
+import SearchError from './SearchError';
 
 class Search extends Component {
   constructor(props) {
@@ -13,7 +14,8 @@ class Search extends Component {
       input: '',
       currentWoeId: 0,
       cities: [],
-      queryIsActive: false
+      queryIsActive: false,
+      error: false
     };
   }
 
@@ -35,7 +37,7 @@ class Search extends Component {
       }
     } else {
       this.setState({
-        error: 'Not an eligible city'
+        error: true
       });
     }
   }
@@ -87,19 +89,22 @@ class Search extends Component {
         className={'search-' + this.props.classTag}
         onSubmit={this.handleSubmit}
       >
-        <input
-          className={'search-text-' + this.props.classTag}
-          type="text"
-          placeholder="See the weather in ..."
-          value={this.state.input}
-          onChange={this.update('input')}
-          onKeyPress={this.onKeyPress}
-        />
-        <input
-          className={'search-button-' + this.props.classTag}
-          type="submit"
-          onClick={this.handleSubmit}
-        />
+        <div className={'search-adaptive-' + this.props.classTag}>
+          <input
+            className={'search-text-' + this.props.classTag}
+            type="text"
+            placeholder="See the weather in ..."
+            value={this.state.input}
+            onChange={this.update('input')}
+            onKeyPress={this.onKeyPress}
+          />
+          <input
+            className={'search-button-' + this.props.classTag}
+            type="submit"
+            onClick={this.handleSubmit}
+          />
+        </div>
+        <SearchError error={this.state.error} />
       </div>
     );
   }
