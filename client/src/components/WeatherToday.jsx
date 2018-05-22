@@ -28,17 +28,17 @@ class WeatherToday extends Component {
 
           <div className="weather-report">
             <div className="weather-report-left">
-              <h3 className="weather-report-date">RIGHT NOW</h3>
+              <h3 className="weather-report-date">Right Now</h3>
               <h3 className="weather-report-status">
-                {String(weather.weather_state_name).toUpperCase()}
+                {weather.weather_state_name}
               </h3>
             </div>
             <div className="weather-report-right">
-              <h3 className="weather-report-degree">
-                {Math.round(weather.max_temp)}
+              <h3 className="weather-report-degree max">
+                {Math.round(weather.max_temp * 9 / 5 + 32)}&deg;F
               </h3>
-              <h3 className="weather-report-degree">
-                {Math.round(weather.min_temp)}
+              <h3 className="weather-report-degree min">
+                {Math.round(weather.min_temp * 9 / 5 + 32)}&deg;F
               </h3>
             </div>
           </div>

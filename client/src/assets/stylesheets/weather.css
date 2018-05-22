@@ -4,16 +4,16 @@
 
 .search-holder {
   background: #f7f7f7;
-  padding: 15px 15px 0px 15px;
+  padding: 15px 15px 2px 15px;
 }
 
 .carousel-holder {
 }
 
 .slider-item {
-  /* height: calc(100vh - 80px - 106px); */
-  height: 70vh;
   background: #f7f7f7;
+  /* height: 70vh; */
+  /* overflow: scroll; */
 }
 
 /* navigation arrows */
@@ -24,7 +24,7 @@
   background: none;
   padding: none;
   margin: 0 10px;
-  font-size: 6em;
+  font-size: 4em;
 }
 .left {
   left: 0;
