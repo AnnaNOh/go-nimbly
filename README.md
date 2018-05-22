@@ -2,6 +2,8 @@
 
 ## Overview
 
+[Live Site](https://anna-go-nimbly.herokuapp.com/#/)
+
 A single-page weather application.
 You enter a city. It gives you the weather.
 Sleek and straightforward.
@@ -17,6 +19,8 @@ Sleek and straightforward.
 
 ## Tasks (All Completed)
 
+![Search](https://media.giphy.com/media/RMy60W37wvcKYvGzLi/giphy.gif)
+
 1.  Build a UI for web browsers that takes a user input
 2.  Make a callout to a 3rd party API with user input
     I chose to use https://www,metaweather.com/api/
@@ -30,6 +34,8 @@ Sleek and straightforward.
 3.  Go Nimbly inspired color scheme and design - Does it look familiar?
 
 ## Design Decisions
+
+![Splash Page](https://media.giphy.com/media/9JvdsMAO2xNic6xiL4/giphy.gif)
 
 * A Splash Page with Hand Rolled Animations
 
