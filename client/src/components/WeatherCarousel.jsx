@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
-import Carousel from './Carousel';
+import '../assets/stylesheets/weather.css';
 
 import { getWeather } from '../util/weather_api';
-
 import Header from './Header';
 import Search from './Search';
-import WeatherToday from './WeatherToday';
-import WeatherFuture from './WeatherFuture';
+import Carousel from './Carousel';
 import Footer from './Footer';
-
-import '../assets/stylesheets/weather.css';
 
 class WeatherCarousel extends Component {
   constructor(props) {
@@ -27,7 +23,6 @@ class WeatherCarousel extends Component {
         weather: res.data.consolidated_weather
       });
     });
-    console.log('weather ', this.state);
   }
 
   componentDidMount() {
@@ -41,12 +36,10 @@ class WeatherCarousel extends Component {
   }
 
   render() {
-    // console.log(this.state);
-    // console.log('props ', this.props);
     let state = this.state;
     return (
       <div className="weather-carousel">
-        <Header />
+        <Header history={this.props.history} />
         <div className="nav-bar-displacer" />
         <div className="search-holder">
           <Search

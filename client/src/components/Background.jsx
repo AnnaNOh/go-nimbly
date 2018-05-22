@@ -6,18 +6,10 @@ import Search from './Search';
 import Footer from './Footer';
 
 class Background extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
   render() {
-    // console.log(this.state);
-    // console.log(`background props `, this.props);
-
     return (
       <div className="splash">
-        <Header />
+        <Header history={this.props.history} />
         <div className="background">
           <div className="sky" />
           <div className="sun-cover">

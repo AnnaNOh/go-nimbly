@@ -13,6 +13,7 @@
   font-family: 'Open Sans', sans-serif;
   transition: 0.5s;
   color: #263f52;
+  text-decoration: none;
 }
 
 .footer > *:hover {

@@ -1,16 +1,10 @@
 import React, { Component } from 'react';
 import '../assets/stylesheets/weatherFuture.css';
+
 import WeatherGif from './WeatherGif';
 
 class WeatherFuture extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
   render() {
-    // console.log(this.state);
-    // console.log(this.props);
     if (this.props.city.length <= 0) {
       return <div />;
     } else {

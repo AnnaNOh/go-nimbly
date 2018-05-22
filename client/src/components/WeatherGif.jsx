@@ -13,10 +13,6 @@ import lc from '../assets/gifs/lc-1.gif';
 import c from '../assets/gifs/c-1.gif';
 
 class WeatherGif extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     let weather = this.props.weather;
     if (weather === 'lc') {

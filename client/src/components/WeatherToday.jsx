@@ -1,17 +1,10 @@
 import React, { Component } from 'react';
 import '../assets/stylesheets/weatherToday.css';
+
 import WeatherGif from './WeatherGif';
-import Loading from './Loading';
 
 class WeatherToday extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
   render() {
-    // console.log(this.props);
-
     if (this.props.city.length <= 0) {
       return <div />;
     } else {

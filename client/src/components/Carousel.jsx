@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Slider from 'react-slick';
 
+import Loading from './Loading';
 import WeatherToday from './WeatherToday';
 import WeatherFuture from './WeatherFuture';
-import Loading from './Loading';
 
-class Carousel extends React.Component {
+class Carousel extends Component {
   render() {
     let settings = {
       dots: true,

@@ -1,22 +1,12 @@
 import React, { Component } from 'react';
-import { HashRouter, Route, Switch, Link, withRouter } from 'react-router-dom';
-
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import './assets/stylesheets/reset.css';
-import './assets/stylesheets/App.css';
-
-import { getCities, getWeather } from './util/weather_api';
+import './assets/stylesheets/app.css';
 
 import Background from './components/Background';
-import Header from './components/Header';
-import Loading from './components/Loading';
 import WeatherCarousel from './components/WeatherCarousel';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
   render() {
     return (
       <div className="App">

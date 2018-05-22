@@ -6,6 +6,7 @@ import { getCities } from '../util/weather_api';
 class Search extends Component {
   constructor(props) {
     super(props);
+    this.onKeyPress = this.onKeyPress.bind(this);
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.state = {
@@ -16,12 +17,16 @@ class Search extends Component {
     };
   }
 
+  onKeyPress(e) {
+    if (e.key === 'Enter') {
+      this.handleSubmit();
+    }
+  }
+
   handleSubmit() {
     if (this.state.input === '') return null;
 
     if (this.state.currentWoeId > 0) {
-      console.log('search ', this.state);
-      console.log('search ', this.props);
       if (this.props.comingFrom === 'background') {
         this.props.history.push(`/weather/${String(this.state.currentWoeId)}`);
       } else {
@@ -76,18 +81,19 @@ class Search extends Component {
   }
 
   render() {
-    // console.log('get cities ', getCities('san'));
-    // console.log('weather test of san fran ', getWeather('2487956'));
-    // console.log(this.state);
-    // console.log(`props `, this.props);
     return (
-      <div className={'search-' + this.props.classTag}>
+      <div
+        id="weatherForm"
+        className={'search-' + this.props.classTag}
+        onSubmit={this.handleSubmit}
+      >
         <input
           className={'search-text-' + this.props.classTag}
           type="text"
           placeholder="See the weather in ..."
           value={this.state.input}
           onChange={this.update('input')}
+          onKeyPress={this.onKeyPress}
         />
         <input
           className={'search-button-' + this.props.classTag}
