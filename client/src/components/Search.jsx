@@ -51,15 +51,14 @@ class Search extends Component {
           this.handleCity(this.state.currentWoeId);
           setTimeout(() => {
             this.props.history.push({
-              pathname: `/weather/${String(this.state.currentWoeId)}`,
-              state: {
-                city: this.state.city,
-                weather: this.state.weather
-              }
+              pathname: `/weather/${String(this.state.currentWoeId)}`
             });
           }, 500);
         } else {
           this.props.handleCity(this.state.currentWoeId);
+          this.props.history.push({
+            pathname: `/weather/${String(this.state.currentWoeId)}`
+          });
         }
       } else {
         this.setState({
