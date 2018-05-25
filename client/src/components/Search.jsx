@@ -40,30 +40,33 @@ class Search extends Component {
   handleSubmit() {
     if (this.state.input === '') return null;
 
-    if (this.state.currentWoeId > 0) {
-      this.setState({
-        error: false
-      });
-      if (this.props.comingFrom === 'background') {
-        this.handleCity(this.state.currentWoeId);
+    // setTimeout is a temproary fix to deal with async issues with update(field)
+    setTimeout(() => {
+      if (this.state.currentWoeId > 0) {
+        this.setState({
+          error: false
+        });
 
-        setTimeout(() => {
-          this.props.history.push({
-            pathname: `/weather/${String(this.state.currentWoeId)}`,
-            state: {
-              city: this.state.city,
-              weather: this.state.weather
-            }
-          });
-        }, 1000);
+        if (this.props.comingFrom === 'background') {
+          this.handleCity(this.state.currentWoeId);
+          setTimeout(() => {
+            this.props.history.push({
+              pathname: `/weather/${String(this.state.currentWoeId)}`,
+              state: {
+                city: this.state.city,
+                weather: this.state.weather
+              }
+            });
+          }, 500);
+        } else {
+          this.props.handleCity(this.state.currentWoeId);
+        }
       } else {
-        this.props.handleCity(this.state.currentWoeId);
+        this.setState({
+          error: true
+        });
       }
-    } else {
-      this.setState({
-        error: true
-      });
-    }
+    }, 500);
   }
 
   update(field) {
@@ -74,27 +77,19 @@ class Search extends Component {
         queryIsActive: true
       });
 
-      if (
-        currentValue.length > 3 &&
-        currentValue[currentValue.length] !== ' ' &&
-        this.state.queryIsActive
-      ) {
+      if (currentValue.length > 3) {
         getCities(currentValue).then(res => {
           let cities = [];
           for (let i = 0; i < 8 && i < res.data.length; i++) {
             cities.push(res.data[i].title);
           }
+          let currentWoeId = cities[0] ? res.data[0].woeid : 0;
           this.setState({
-            cities
+            cities,
+            currentWoeId
           });
-
-          // only set current city if there is a match
-          if (res.data[0]) {
-            this.setState({
-              currentWoeId: res.data[0].woeid
-            });
-          }
         });
+        // clear the cities and currentWoeId if no match
       } else {
         if (this.state.currentWoeId !== 0) {
           this.setState({
@@ -107,6 +102,7 @@ class Search extends Component {
   }
 
   render() {
+    console.log(this.state);
     return (
       <div
         id="weatherForm"

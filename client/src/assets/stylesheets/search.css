@@ -72,6 +72,11 @@ input:focus {
   font-size: 1em;
   color: white;
   cursor: pointer;
+  transition: 0.5s;
+}
+
+.search-button-weather:hover {
+  box-shadow: 0px 8px 15px 0px rgb(0, 0, 0, 0.2);
 }
 
 /* responsive design for search-weather */
