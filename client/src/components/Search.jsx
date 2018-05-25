@@ -102,7 +102,6 @@ class Search extends Component {
   }
 
   render() {
-    console.log(this.state);
     return (
       <div
         id="weatherForm"
